@@ -72,22 +72,21 @@
 <script type="application/javascript">
     function limitBandwidth() {
         var request = new XMLHttpRequest();
-        request.open('POST', "/limit");
+        request.open("POST", "/limit");
         request.send();
         request.onload = function () {
-          console.log(request.status);
           var btn = document.querySelector(".btn");
           if (request.status == 200) {
-            btn.style.color = "rgba(50,220,220,1)"
+            btn.style.color = "rgba(50,220,220,1)";
             btn.style.textShadow = "0px 0px 6px rgba(10,255,255, 0.6)";
           } else {
-            btn.style.color = "rgba(155,50,50,1)"
+            btn.style.color = "rgba(155,50,50,1)";
             btn.style.textShadow = "0px 0px 6px rgba(255,10,10, 0.6)";
-          };
+          }
         }
     }
     (function () {
-        var button = document.querySelector("#button")
+        var button = document.querySelector("#button");
         button.onclick = limitBandwidth;
     })();
 </script>
