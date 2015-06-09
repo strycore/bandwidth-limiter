@@ -1,14 +1,16 @@
 import os
 import cherrypy
+import subprocess
 
 
-class HelloWorld(object):
+class Limiter(object):
     @cherrypy.expose
     def index(self):
         return file('index.html')
 
     @cherrypy.expose
     def limit(self):
+        subprocess.Popen(["./limiter.sh"])
         return "ok"
 
 
@@ -23,4 +25,4 @@ if __name__ == '__main__':
             'tools.staticdir.dir': './public'
         }
     }
-    cherrypy.quickstart(HelloWorld(), '/', conf)
+    cherrypy.quickstart(Limiter(), '/', conf)
