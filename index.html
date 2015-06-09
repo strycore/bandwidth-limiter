@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin-top: 200px;
+            background: #242527;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .btn {
+            position: relative;
+            cursor: pointer;
+            width: 140px;
+            height: 140px;
+            line-height: 100px;
+            background: #25292C;
+            margin: 0px auto;
+            text-align: center;
+            border-radius: 999px;
+            color: rgba(50,155,50,1);
+            text-shadow: 0px 0px 3px rgba(10,255,10, 0.5), 1px 1px 2px rgba(0,0,0,0);
+            font-size: 6em;
+            font-family: sans-serif;
+            box-shadow: inset 1px 1px 2px rgba(255,255,255,0.3),
+            inset 3px 15px 45px rgba(255,255,255,0.1),
+            inset -1px -1px 2px rgba(0,0,0,0.5),
+            inset -3px -15px 45px rgba(0,0,0,0.2),
+            1px 5px 30px -4px rgba(0,0,0,1);
+            -webkit-transition: 0.1s ease-out;
+            -moz-transition:    0.1s ease-out;
+            -o-transition:      0.1s ease-out;
+            transition:         0.1s ease-out;
+        }
+        .btn:before {
+            content: "";
+            background: #1A1A1A;
+            width: 170px;
+            height: 170px;
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            z-index: -1;
+            border-radius: 999px;
+            box-shadow: inset -1px -1px 2px rgba(255,255,255,0.3),
+            inset -5px -15px 40px rgba(255,255,255,0.1),
+            inset 1px 1px 2px rgba(0,0,0,0.5),
+            inset 5px 15px 40px rgba(0,0,0,0.2),
+            -2px -40px 50px -20px rgba(255,255,255,0.1),
+            2px 35px 50px -10px rgba(0,0,0,0.4),
+            0px 0px 25px 8px rgba(60,60,60,1);
+        }
+        .btn:active {
+            color: rgba(0,20,0,0.7);
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.15);
+            box-shadow: inset 1px 1px 2px rgba(255,255,255,0.3),
+            inset 3px 15px 45px rgba(0,0,0,0.2),
+            inset -1px -1px 2px rgba(0,0,0,0.5),
+            inset -3px -15px 45px rgba(255,255,255,0.1),
+            1px 5px 10px -4px rgba(0,0,0,1);
+        }
+    </style>
+</head>
+<body>
+<div class="btn" id="button">&#x1f422;</div>
+<script type="application/javascript">
+    (function () {
+        var button = document.querySelector("#button")
+        button.onclick = function () {
+            console.log('plop');
+        }
+    })();
+</script>
+</body>
+</html>
